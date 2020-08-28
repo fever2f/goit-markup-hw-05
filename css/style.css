@@ -76,6 +76,9 @@ a {
   display: flex;
   align-items: center;
 }
+header {
+  border-bottom: 1px solid #ececec;
+}
 
 .header-address-list .item + .item {
   margin-left: 50px;
@@ -90,7 +93,7 @@ a {
 .header-address-list {
   display: flex;
   margin-left: auto;
-  align-items: baseline;
+  align-items: center;
 }
 
 .mail-svg,
@@ -104,7 +107,7 @@ a {
 }
 
 .team-member-position {
-  margin-bottom: 28px;
+  margin-bottom: 16px;
 }
 
 .team-links-list {
@@ -253,25 +256,25 @@ a:active { background-color: yellow; } */
   letter-spacing: 0.03em;
 }
 
-.features-icon {
+.features-icon-thumb {
   background-color: #f5f4fa;
   margin-bottom: 30px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.antenna {
-  padding: 25px 102px;
+.features-list {
+  display: flex;
 }
 
-.clock {
-  padding: 25px 101px;
+.features-list-item:not(:last-child) {
+  margin-right: 30px;
 }
 
-.diagram {
-  padding: 33px 100px;
-}
-
-.astronaut {
-  padding: 30px 115px 29px 100px;
+.features-list-item {
+  flex-basis: calc((100% - 3 * 30px) / 4);
 }
 
 .about-work-title {
@@ -320,7 +323,6 @@ a:active { background-color: yellow; } */
 
 .about-our-team-list {
   display: flex;
-  justify-content: space-between;
 }
 
 .about-our-team-list-item {
@@ -329,6 +331,11 @@ a:active { background-color: yellow; } */
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   padding-bottom: 30px;
+  flex-basis: calc((100% - 3 * 30px) / 4);
+}
+
+.about-our-team-list-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .portfolio-link-current-color {
@@ -383,10 +390,6 @@ a:active { background-color: yellow; } */
   padding-right: 24px;
 }
 
-.projects-list-item img {
-  margin-bottom: 20px;
-}
-
 .projects-list-item {
   background-color: #fff;
   padding-bottom: 20px;
@@ -396,7 +399,6 @@ a:active { background-color: yellow; } */
 .projects-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .projects-list-item:nth-child(-n + 6) {
@@ -404,7 +406,7 @@ a:active { background-color: yellow; } */
 }
 
 .container {
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -433,7 +435,10 @@ a:active { background-color: yellow; } */
 }
 .clients-list {
   display: flex;
-  justify-content: space-between;
+}
+
+.clients-list-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .clients-link {
@@ -490,17 +495,15 @@ footer {
   padding: 94px 0 94px 0;
 }
 
-.features-list {
+.about-work-list {
   display: flex;
 }
-
-.features-list-item:not(:last-child) {
+.about-work-list-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.about-work-list {
-  display: flex;
-  justify-content: space-between;
+.about-work-list-item {
+  flex-basis: calc((100% - 2 * 30px) / 3);
 }
 
 .footer-links-title {
@@ -559,19 +562,16 @@ footer {
   font-family: Roboto;
   font-weight: bold;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.15;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
 
-  margin-top: 20px;
   margin-bottom: 0;
+  margin-top: 0;
+  padding: 27px 0 27px 0;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 370px;
-  height: 70px;
+  width: 100%;
   background-color: rgba(47, 48, 58, 0.8);
 
   color: #ffffff;
@@ -597,11 +597,11 @@ footer {
   background-color: rgba(33, 150, 243, 0.9);
 
   position: absolute;
-  top: 100%;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  transform: translatey(0);
+  transform: translatey(100%);
   transition: transform 250ms ease;
 }
 
@@ -616,8 +616,8 @@ footer {
   padding-right: 24px;
 }
 
-.project-thumb:hover .overlay {
-  transform: translatey(-100%);
+.projects-list-link:hover .overlay {
+  transform: translatey(0);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

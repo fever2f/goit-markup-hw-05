@@ -392,8 +392,7 @@ a:active { background-color: yellow; } */
 
 .projects-list-item {
   background-color: #fff;
-  padding-bottom: 20px;
-  border: 1px solid #eeeeee;
+  outline: 1px solid #eeeeee;
 }
 
 .projects-list {
@@ -405,8 +404,21 @@ a:active { background-color: yellow; } */
   margin-bottom: 30px;
 }
 
+.projects-list-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.projects-list-item {
+  flex-basis: calc((100% - 3 * 30px) / 3);
+}
+
+.project-item-text {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .container {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;

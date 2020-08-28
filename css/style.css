@@ -543,8 +543,10 @@ footer {
   display: flex;
 }
 
-.footer-container-1 {
-  margin-right: 70px;
+.footer-container-1,
+.footer-container-2 {
+  margin-right: 30px;
+  width: 270px;
 }
 
 .projects-list-item:hover {
